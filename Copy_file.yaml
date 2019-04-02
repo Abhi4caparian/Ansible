@@ -1,0 +1,10 @@
+---
+
+- name: on hosts
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: copy to remote
+    copy:
+      src: /home/harshit/Desktop/abhi/dump2.txt
+      dest: /home/harshit/Desktop/

@@ -1,0 +1,8 @@
+---
+
+- name: on hosts
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: Rename a folder
+    shell: sudo mv /home/harshit/Desktop/abhi/scripting/jdk1.7.0_79/ /home/harshit/Desktop/abhi/jdk7
