@@ -1,0 +1,17 @@
+---
+
+- name: on hosts
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: Download file from a file path
+    get_url:
+      url: http://mirrors.estointernet.in/apache/tomcat/tomcat-8/v8.5.38/bin/apache-tomcat-8.5.38.tar.gz
+      dest: /home/harshit/Desktop/abhi
+  - name: Unarchive a file that is already on the remote machine
+    unarchive:
+      src: /home/harshit/Desktop/abhi/apache-tomcat-8.5.38.tar.gz
+      dest: /mnt
+  - name: Rename a folder
+    shell: sudo mv /mnt/apache-tomcat-8.5.38/ /mnt/tomcat
+
